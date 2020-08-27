@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import MyIcon from "./Icons";
 const Card = (props) => (
   <Container>
     <Cover>
@@ -8,7 +8,7 @@ const Card = (props) => (
       <Title>{props.title}</Title>
     </Cover>
     <Content>
-      <Logo></Logo>
+      <MyIcon name={props.icon} width={44} height={44} />
       <Wrapper>
         <Caption>{props.caption}</Caption>
         <Subtitle>{props.subtitle}</Subtitle>
@@ -24,13 +24,13 @@ const Container = styled.View`
   height: 280px;
   border-radius: 14px;
   margin-left: 20px;
-  margin-right: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  border: 1px solid #888;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 `;
 const Cover = styled.View`
   height: 180px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  overflow: hidden;
 `;
 const Image = styled.Text`
   background-color: blue;
